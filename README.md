@@ -9,3 +9,7 @@ cp -r config_orig/. config/
 rm -rf config_orig/
 cd config/ && git checkout printer.cfg
 ```
+
+## Reference
+
+- https://github.com/Klipper3d/klipper/blob/master/config/sample-macros.cfg
