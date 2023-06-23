@@ -13,6 +13,7 @@ cd config/ && git checkout printer.cfg
 ## Reference
 
 - https://github.com/Klipper3d/klipper/blob/master/config/sample-macros.cfg
+- https://www.klipper3d.org/Measuring_Resonances.html
 
 ## SD Card Troubleshooting
 
@@ -98,8 +99,18 @@ sudo dd if=~/klipper.img of=/dev/sdb
 
 If you have any trouble cloning the SD card this way, you can try balenaEtcher software
 
+## Input Shapper and Pressure Advance
 
+First, install the input shapper hardware on the machine and comment out the line of code that contains the `pressure_advance` in printer.cfg and uncomment the line that inclues the `adxl.cfg`
 
+Now, run the following command
+```
+SHAPER_CALIBRATE
+```
 
+If it fails, just run the command again.
 
+After all the calculations, just click on `SAVE CONFIG` button.
+
+Open `printer.cfg` again, comment out the line that includes the `adxl.cfg` and uncomment the `pressure_advance`
 
