@@ -101,7 +101,21 @@ If you have any trouble cloning the SD card this way, you can try balenaEtcher s
 
 ## Input Shapper and Pressure Advance
 
-First, install the input shapper hardware on the machine and comment out the line of code that contains the `pressure_advance` in printer.cfg and uncomment the line that inclues the `adxl.cfg`
+### First, install the input shapper hardware on the machine
+
+With the current configuration in adxl.cfg, the cable connected to pin1 (GP0) is the one you should connect on the hotend's sensor (accelerometer), while the cable connected to pin6 (GP4) is the one you should connect on the bed's sensor (accelerometer).
+
+Also, make sure to fix the accelerometers on the correct orientation:
+- for the hostend, the machine's X/Y/Z axis should match the sensor's Z/Y/X
+- for the bed, the machine's X/Y/Z axis should match the sensor's X/Y/Z
+
+### Then, reconfigure the code
+
+in printer.cfg:
+- comment out the line of code that contains the `pressure_advance`
+- uncomment the line that inclues the `adxl.cfg`
+
+### Run
 
 Now, run the following command
 ```
