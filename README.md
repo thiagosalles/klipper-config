@@ -105,9 +105,13 @@ If you have any trouble cloning the SD card this way, you can try balenaEtcher s
 
 With the current configuration in adxl.cfg, the cable connected to pin1 (GP0) is the one you should connect on the hotend's sensor (accelerometer), while the cable connected to pin6 (GP4) is the one you should connect on the bed's sensor (accelerometer).
 
+[Raspberry pi connection reference](https://www.klipper3d.org/Measuring_Resonances.html#adxl345)
+
 Also, make sure to fix the accelerometers on the correct orientation:
 - for the hostend, the machine's X/Y/Z axis should match the sensor's Z/Y/X
 - for the bed, the machine's X/Y/Z axis should match the sensor's X/Y/Z
+
+[ADXL345 configuration reference](https://www.klipper3d.org/Config_Reference.html?h=axes_map#adxl345)
 
 ### Then, reconfigure the code
 
